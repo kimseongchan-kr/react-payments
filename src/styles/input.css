@@ -11,14 +11,27 @@
   background-color: #ecebf1;
 }
 
+.input-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 4px;
+}
+
+.input-body {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+}
+
 .input-title {
   display: flex;
   align-items: center;
 
   font-size: 12px;
   line-height: 14px;
-
-  margin-bottom: 4px;
 
   color: #525252;
 }
