@@ -11,7 +11,7 @@ const InputGroup = ({ label: { leftLabel, rightLabel }, className, detachInput, 
       </div>
       <div className="input-body">
         {detachInput ? <div className={className}>{children}</div> : children}
-        {<Icon icon={icon} />}
+        {icon ? <Icon icon={icon} /> : ''}
       </div>
     </div>
   );
