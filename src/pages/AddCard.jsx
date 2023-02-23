@@ -58,7 +58,7 @@ const AddCard = () => {
       </InputGroup>
 
       <InputGroup label={{ left: '보안코드(CVC/CVV)' }} icon="question" detachInput>
-        <Input type="text" className="input-basic w-25" maxLength={3} onlyNumber />
+        <Input type="password" className="input-basic w-25" maxLength={3} onlyNumber />
       </InputGroup>
 
       <InputGroup label={{ left: '카드 비밀번호' }} detachInput>
@@ -68,8 +68,8 @@ const AddCard = () => {
           input={[
             { className: 'input-basic w-15' },
             { className: 'input-basic w-15' },
-            { className: 'input-underline w-15' },
-            { className: 'input-underline w-15' },
+            { className: 'input-underline w-15', value: 0, disable: true },
+            { className: 'input-underline w-15', value: 0, disable: true },
           ]}
           type="password"
           maxLength={1}
