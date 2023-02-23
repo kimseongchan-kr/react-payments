@@ -2,15 +2,15 @@ import React from 'react';
 
 import Icon from './Icon';
 
-const InputGroup = ({ label: { leftLabel, rightLabel }, className, detachInput, icon, children }) => {
+const InputGroup = ({ label: { left, right }, className, detachInput, icon, children }) => {
   return (
     <div className="input-container">
       <div className="input-header">
-        <span className="input-title">{leftLabel}</span>
-        <span className="input-title">{rightLabel}</span>
+        <span className="input-title">{left}</span>
+        <span className="input-title">{right}</span>
       </div>
       <div className="input-body">
-        {detachInput ? <div className={className}>{children}</div> : children}
+        {detachInput ? children : <div className={className}>{children}</div>}
         {icon ? <Icon icon={icon} /> : ''}
       </div>
     </div>

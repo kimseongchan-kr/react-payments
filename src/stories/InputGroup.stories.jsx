@@ -18,8 +18,8 @@ const Template = (args) => (
 export const Playground = Template.bind({});
 Playground.args = {
   label: {
-    leftLabel: 'left-titile',
-    rightLabel: 'right-title',
+    left: 'left-titile',
+    right: 'right-title',
   },
   className: 'input-box',
   detachInput: true,

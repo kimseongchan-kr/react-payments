@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Input from '../components/common/Input';
+import ConnectedInput from '../components/connectedInput/ConnectedInput';
 import InputGroup from '../stories/InputGroup';
 
 const AddCard = () => {
@@ -22,7 +23,7 @@ const AddCard = () => {
         </div>
       </div>
 
-      <InputGroup label={{ leftLabel: '카드 번호' }} className="input-box" detachInput>
+      <InputGroup label={{ left: '카드 번호' }} className="input-box">
         <Input className="input-basic" type="text" maxLength={4} onlyNumber />
         -
         <Input className="input-basic" type="text" maxLength={4} onlyNumber />
@@ -32,21 +33,22 @@ const AddCard = () => {
         <Input className="input-basic" type="password" maxLength={4} onlyNumber />
       </InputGroup>
 
-      <InputGroup label={{ leftLabel: '만료일' }} className="input-box w-50" detachInput>
+      <InputGroup label={{ left: '만료일' }} className="input-box w-50">
+        <ConnectedInput name="test" sign="/" count={2} />
         <input className="input-basic" type="text" placeholder="MM" />
         /
         <input className="input-basic" type="text" placeholder="YY" />
       </InputGroup>
 
-      <InputGroup label={{ leftLabel: '카드 소유자 이름(선택)', rightLabel: '0/30' }}>
+      <InputGroup label={{ left: '카드 소유자 이름(선택)', right: '0/30' }} detachInput>
         <input type="text" className="input-basic" placeholder="카드에 표시된 이름과 동일하게 입력하세요." />
       </InputGroup>
 
-      <InputGroup label={{ leftLabel: '보안코드(CVC/CVV)' }} icon="question">
+      <InputGroup label={{ left: '보안코드(CVC/CVV)' }} icon="question" detachInput>
         <input className="input-basic w-25" type="password" />
       </InputGroup>
 
-      <InputGroup label={{ leftLabel: '카드 비밀번호' }}>
+      <InputGroup label={{ left: '카드 비밀번호' }} detachInput>
         <input className="input-basic w-15" type="password" />
         <input className="input-basic w-15" type="password" />
         <input className="input-basic w-15" type="password" />
